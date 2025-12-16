@@ -5,9 +5,11 @@ body {
     font-family: sans-serif;
     display: flex;
     justify-content: center; /* Centers horizontally */
-    align-items: center;     /* Centers vertically */
+    align-items: flex-start;     /* Centers vertically */
     height: 100vh;           /* Full screen height */
     margin: 0;
+    padding-top: 50px; /* Space from top */
+    padding-bottom: 50px; /* Space from bottom */
 }
 
 /* 2. Style the Box/Card */
@@ -62,4 +64,31 @@ button:hover {
 
 .footer a:hover {
     text-decoration: underline;
+}
+/* Market Ticker Styling */
+.market-card {
+    background: #1e1e2f; /* Dark blue-grey */
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px; /* Push the calculator down */
+    text-align: center;
+    border: 1px solid #00e676; /* Green border */
+    box-shadow: 0 4px 15px rgba(0, 230, 118, 0.2); /* Green glow */
+}
+
+.market-card h3 {
+    margin: 0 0 10px 0;
+    color: #fff;
+    font-size: 1.2rem;
+}
+
+.price-row {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+/* Specific color for the price number */
+#btc-price {
+    color: #00e676; 
 }

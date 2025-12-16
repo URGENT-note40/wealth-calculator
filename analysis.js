@@ -91,3 +91,28 @@ function renderChart(labels, bankData, realData) {
         }
     });
 }
+// Fetch Live Bitcoin Price and Update the DOM
+// --- LIVE MARKET DATA ---
+
+async function fetchBitcoinPrice() {
+    const priceElement = document.getElementById('btc-price');
+    
+    try {
+        // 1. Call the Waiter (API)
+        const response = await fetch('https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd');
+        const data = await response.json();
+        
+        // 2. Extract the price
+        const btcPrice = data.bitcoin.usd;
+        
+        // 3. Update the HTML
+        priceElement.innerText = `$${btcPrice.toLocaleString()}`; // Adds commas like 96,000
+        
+    } catch (error) {
+        console.log("Error fetching data:", error);
+        priceElement.innerText = "Unavailable";
+    }
+}
+
+// 4. Run this automatically when the page loads
+fetchBitcoinPrice();
