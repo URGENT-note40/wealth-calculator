@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Calculator</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    </head>
+    <body>
+      <div class="calculator-box">
+           <h2>💰 Wealth Calculator</h2>
+        
+             <label>Initial Balance</label>
+             <input type="number" id="initial" placeholder="1000">
+
+             <label>Monthly Deposit</label>
+             <input type="number" id="deposit" placeholder="500">
+
+             <label>Interest Rate (%)</label>
+             <input type="number" id="rate" placeholder="7">
+
+             <label>Average Inflation (%)</label>
+             <input type="number" id="inflation" placeholder="3">
+
+             <label>Years</label>
+             <input type="number" id="years" placeholder="30">
+
+             <button onclick="calculateWealth()">Calculate Future</button>
+
+           <h2 id="result">Total: $0</h2>
+           <h2 id="result">Total: $0</h2>
+
+        <div style="height: 300px; width: 100%;">
+           <canvas id="myChart"></canvas>
+        </div>
+        <div class="footer">
+        Built with 💻 by <a href="https://github.com/URGENT-note40" target="_blank">Your Name</a>
+        </div>
+       </div>
+      <script src="analysis.js"></script>
+    </body>
+</html>
